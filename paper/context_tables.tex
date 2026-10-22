@@ -1,0 +1,43 @@
+\begin{table}[htbp]\centering\small
+\caption{Prior contributions and the scope of this paper}\label{tab:literature}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Research & Established contribution & Role in this study\\\midrule
+\citet{croushore2001}; \citet{aruoba2008} & Vintage data and empirical revision properties in macroeconomic statistics & Adopt vintage-aware evaluation; assess migration monitoring decisions\\
+\citet{mckenzie2006}; \citet{eurostat2013} & Revision measures at fixed horizons; transparent revision schedules and analysis for users & Apply explicit tolerance and attainment requirements, including denominator sensitivity, to migration monitoring\\
+\citet{abs2024}; \citet{statsnzdata} & Agency comparisons of preliminary and later migration counts & Extend to matched ages and endpoints, aggregation, components and uncertainty targets\\
+\citet{jacobs2011} & Models news, noise and spillovers in data revisions & Clarifies the distinction from identifying latent true values or revision mechanisms\\
+\citet{mazzi2021}; \citet{onsuncertainty} & Distinguishes uncertainty sources and their communication & Evaluate containment of later counts as a separate target from model uncertainty\\
+\citet{ons2025} & Migration stability and intervals informed by historical revisions & Compare matched information ages, aggregation and component offsetting across Australia and New Zealand\\
+This paper & Comparative empirical evaluation & Identify changes in monitoring conclusions; assess one exploratory revision-risk benchmark\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]\centering\small
+\caption{Country comparison and information constraints}\label{tab:data}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.23\linewidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+Feature & New Zealand & Australia\\\midrule
+Public input & Consolidated history of estimates and standard errors \citep{statsnzdata} & Detailed quarterly workbooks in the population release archive \citep{absarchive}\\
+Quarterly target & Three monthly counts from one vintage & Published quarterly counts\\
+Annual target & Published year-ended count and its annual standard error & Four consecutive quarters from one vintage\\
+Main endpoints & \multicolumn{2}{p{.7\linewidth}}{24 common quarter ends, 2019Q2--2025Q1; all flows and ages 6, 9, 12 and 15 plus the 18-month reference required}\\
+Additional annual endpoints & 75 month ends, January 2019--March 2025 & No additional endpoints in the main country comparison\\
+Availability rule & Recorded publication date of the historical column & Exact-file availability date; later workbook or archive-link dates take precedence\\
+18-month reference & Selected published count; no final label inferred & Selected published count; the age rule does not override documented revisions\\
+24-month sensitivity & 22 quarterly and quarter-end annual endpoints; 69 monthly annual endpoints & 22 quarterly endpoints; no complete annual targets in the main-period comparison\\
+Benchmark tests & 33 monthly annual endpoints after training eligibility & 24 quarterly annual endpoints; separate training history\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[htbp]\centering\small
+\caption{Selected documented production and source-data changes}\label{tab:chronology}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{.20\linewidth}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
+System and timing & Affected observations & Documented change\\\midrule
+NZ: July 2019; November 2020 & Provisional estimates from July 2019; finalized January 2001--May 2019 periods in the later update & Improved person linking; later extension across the historical series (workbook notes 2 and 6)\\
+NZ: May--June 2023 & Additional October 2022--March 2023 crossings; updates to some earlier finalized periods & Customs supplied previously missing crossings; subsequent processing also reconciled annual and monthly totals (notes 10--12)\\
+NZ: August 13, 2024 & Provisional estimates in the June 2024 release and subsequent editions & Training changed from 36 finalized months to 32 finalized months plus finalized crossings in four provisional months (note 14; model documentation)\\
+NZ: June 2026 & Finalized September 2022--November 2024 periods, especially January 2023 & Incorrect cruise passenger list and smaller journey-history corrections (note 15)\\
+AU: 2022Q1--2023Q1 target quarters & Preliminary estimates for these movement periods & Corresponding 2018 quarters supplied donor behavior instead of the usual one-year-earlier comparison\\
+AU: December 2024 publication & Movements from 2021Q3 onward & Treatment removed Special Purpose visa movements incorrectly classified as migration\\\bottomrule
+\end{tabularx}
+\par\smallskip\begin{minipage}{\linewidth}\footnotesize Sources: \citet{statsnzdata}, Arrivals notes 2, 6, 10--12, 14--15; \citet{statsnzmodel}, training-data description; \citet{abs2025methods}, History of changes (2022 and 2024). The Australian donor-period entry describes affected reference quarters rather than a single implementation date.\end{minipage}
+\end{table}

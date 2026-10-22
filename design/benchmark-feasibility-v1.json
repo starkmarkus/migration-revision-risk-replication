@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-18",
+  "scope": "Count-only prospective information-set audit. No model, revision quantile, coverage optimisation or benchmark score is estimated.",
+  "selection_status": "Follow-up after observing annual and phase results. Any subsequent performance evaluation is retrospective pseudo-out-of-sample, not an untouched holdout.",
+  "target": "Annual published reference at month18, same definition as the preceding analyses.",
+  "primary_origin": "Actual availability date of the annual snapshot selected at a fixed information-age cutoff. Data are assumed available on that calendar date; training targets must have completed their18month window strictly before this date.",
+  "reference_maturity": "max(reference-end plus18 calendar months, actual availability of the selected reference file). This prevents using a retrospectively selected as-of reference before the selection window has closed.",
+  "origin_sensitivity": "Decision at the end of the nominal information-age month, with references mature by that close.",
+  "training_pool": "All age-specific archived annual counts with a valid18month reference; older endpoints outside the main evaluation period permitted. No requirement for availability at other ages, no future balanced-cohort filtering, no duplication across flows or overlapping releases.",
+  "test_period": "NZ monthly endpoints January2019–March2025; AU quarterly endpoints2019Q1–2025Q1. Paired-country quarter-end subset disclosed separately.",
+  "ages": {"NZ": [2,6,9,12,15], "AU": [6,9,12,15]},
+  "expanding_candidate_thresholds": {"NZ": [12,24,36,60], "AU": [4,8,12,20]},
+  "threshold_interpretation": "Illustrative warm-up sizes, not claims of statistical adequacy. Counts differ by release frequency; compare elapsed history and nonoverlapping annual windows.",
+  "recent_history": "Separately count eligible reference-year endpoints in the trailing36 and60months at each decision origin. These windows include the maturity delay; do not interpret as36/60 available training observations.",
+  "overlap_check": "Maximum number of nonoverlapping12month counting windows by earliest-end greedy selection; not an estimated effective sample size or a claim of statistical independence.",
+  "purged_sensitivity": "Also count training annual endpoints at least12months before the current target endpoint; this removes overlap of counting windows with the current target, not all production/model dependence.",
+  "tail_resolution": "Report0.025*n and0.05*n expected marginal tail counts as arithmetic context for central95/90% empirical intervals under an ideal stationary continuous distribution. These are not observed events or guarantees.",
+  "decision_outputs": "Test start/end/count, nonoverlap capacity, train-count range, phase composition, origin sensitivity, common test opportunities and archives excluded by age or reference availability."
+}

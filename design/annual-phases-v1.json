@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-18",
+  "status": "Follow-up specified after the original results were examined, before calculating this extension; not a preregistration.",
+  "freeze": "2026-10-18",
+  "reference_age": 18,
+  "sensitivity_reference_age": 24,
+  "ages": [6, 9, 12, 15],
+  "nz_additional_ages": [2, 3],
+  "annual_nz": "Published Year ended values and their own standard errors. Do not replace with monthly sums or sum standard errors.",
+  "annual_au": "Sum exactly four consecutive quarterly exact-person counts in one vintage, labelled derived annual totals. No interpolated or cross-vintage inputs; no manufactured intervals.",
+  "periods": "Same planned endpoints as original study: 2019Q1–2025Q1 paired; Jan 2019–Mar 2025 NZ; 2011Q1–2025Q1 AU extended. Require complete paths at all primary ages and reference18. Report excluded endpoints.",
+  "phases": {"pre_2020": "Through Dec 2019", "restrictions_2020_21": "Jan 2020–Dec 2021", "reopening_2022": "Jan–Dec 2022", "later_2023_25": "Jan 2023 onward"},
+  "phase_interpretation": "Reference-period calendar cohorts, not causal policy effects. 2020Q1 includes pre-restriction months. Annual endpoints are grouped by ending date; report phase-composition and fully-contained-year subsets separately. Reference publication may fall in a different phase.",
+  "phase_sources": ["https://www.abs.gov.au/statistics/people/population/overseas-migration/2021-22-financial-year", "https://www.beehive.govt.nz/release/new-zealand%E2%80%99s-border-fully-open-visitors-and-students"],
+  "metrics": "Retain original definitions: signed/absolute/P90 revision scaled by reference gross flow; component-own-flow error; net2%/90% monitoring; components squared identity; quarter year-on-year direction; NZ annual interval revision coverage, width and proper95%interval score.",
+  "inference": "Descriptive phase comparisons, no new significance tests. Full-sample annual pointwise stationary bootstrap 10000 draws with mean blocks6 quarters or18 months (4/8quarters or12/24months sensitivity). All paths retained. Calendar-year-end and all12 monthly endpoint offsets provide overlap sensitivities, not independent-sample guarantees.",
+  "reference_sensitivity": "Use identical eligible endpoints for18vs24 comparison; disclose archive-history loss if 24month annual totals unavailable.",
+  "scope": "No revision-risk model fitted in this task. Report whether evidence supports further benchmark development. Do not infer official CI miscalibration from coverage of a different estimand."
+}

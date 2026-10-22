@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-18",
+  "status": "Rules fixed before this benchmark run, after earlier descriptive outcomes were inspected. Exploratory retrospective pseudo-out-of-sample, not an untouched holdout.",
+  "scope": "One empirical revision-interval algorithm at the six-month snapshot only. No additional fitted models, training-window alternatives, tuning or test-family searches.",
+  "outcome": "Published annual count selected at the 18-month cutoff, not true migration.",
+  "primary_flow": "Net migration; arrivals and departures use the identical rule as component diagnostics.",
+  "training": "Country-specific expanding archive at age six; train only where mature_on is strictly before the actual early-snapshot publication date and historical endpoint precedes the test endpoint. All age-specific eligible history is admitted, including endpoints before 2019.",
+  "warmup": {"New Zealand": 36, "Australia": 12},
+  "warmup_interpretation": "Three nominal years of monthly or quarterly endpoints, not equal independent information or tail-precision guarantees. Australia actually has more history at its first test.",
+  "signed_training_revision": "r_i = (Y_i,18 - Y_i,6) / (A_i,6 + D_i,6). Denominator is the early observed gross count; no future gross count enters prediction.",
+  "interval": "[Y_t,6 + G_t,6 * q_0.025(r), Y_t,6 + G_t,6 * q_0.975(r)]",
+  "quantiles": "numpy method='linear' (type 7); country and flow separately; no centering, truncation, zero anchoring or combination with official standard errors.",
+  "nominal_level": 0.95,
+  "baseline": "NZ published annual model interval Y_t,6 +/- 1.96 * annual published SE, on exactly the same cases. Australia has no official interval comparator in these inputs.",
+  "test": "Previously planned endpoints 2019 through 2025Q1, subject to warmup. Report native monthly NZ and quarterly Australia separately; also shared quarter-end endpoints.",
+  "metrics": "Coverage, directional misses, mean width and 95% interval score in migration counts; paired NZ score/width/coverage differences. Score = width + 40*shortfall below lower or above upper. Also normalize widths/scores by the observable early gross count, multiplying by 100; do not pool countries or flows.",
+  "stability": "Descriptive endpoint-year and previously defined endpoint-phase summaries from the same predictions. Shared quarter-end sample is a cadence diagnostic. No significance claims or independence assumption.",
+  "limitations": "Few independent episodes, overlapping annual windows, changing revision processes, sparse empirical tails. Published model intervals target a narrower uncertainty concept, so this tests usefulness for later published revisions, not calibration for their original estimand.",
+  "success_rule": "Greater coverage alone is insufficient: report the width cost and whether paired mean interval score improves, including failures by flow and year. No rule changes in response to outcomes."
+}

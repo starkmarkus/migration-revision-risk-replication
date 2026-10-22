@@ -1,0 +1,915 @@
+{
+  "package_version": "1.3.0-compact",
+  "data_freeze": "2026-10-18",
+  "input_mode": "Frozen extracted vintage panels; two retained original New Zealand workbooks",
+  "inputs": {
+    "results/archive_manifest.json": "4bdeb62c4ea7bf4c83ae24ffd61af77017cef1ed9aad903ac398029a901ec7a1",
+    "results/nz_vintages.csv": "72b31c3b3699df41c7308838c754ec13ccb298e6e957f440510584a48826b60e",
+    "results/abs_vintages.csv": "6bab703a26cf0388ddc7dcf4f62e6a81e234d5149b8d353de3d9fb443474c459",
+    "raw/nz_history.xlsx": "90bfe7c34674e2e33e3c4d9a95a591ad9c708c2c1ef67c3acc692d6b44a40221",
+    "raw/nz_2019_06_international-migration-june-2019-.xlsx": "81d7824428141c9f42ad3fd391ed3d2d21b3fa786dfed6c1de09c417d6ad2e23"
+  },
+  "original_archive": {
+    "version": "1.2.1-local",
+    "original_workbooks": 210,
+    "included_original_workbooks": 2,
+    "omitted_original_workbooks": 208,
+    "scope": "Original workbook extraction and the omitted workbook cell/hash checks are not repeated by this compact runner. Original workbook URLs and hashes remain in results/archive_manifest.json and the additional manifest below."
+  },
+  "additional_source_manifest": [
+    {
+      "file": "nz_history.xlsx",
+      "url": "https://www.stats.govt.nz/assets/Consultations/migration-data-transformation/Comparison-of-provisional-and-final-migration-estimates-August-2017-to-August-2026.xlsx",
+      "bytes": 1843159,
+      "sha256": "90bfe7c34674e2e33e3c4d9a95a591ad9c708c2c1ef67c3acc692d6b44a40221"
+    },
+    {
+      "file": "nz_2026_08_international-migration-august-2026.xlsx",
+      "url": "https://www.stats.govt.nz/assets/Uploads/International-migration/International-migration-August-2026/Download-data/international-migration-august-2026.xlsx",
+      "bytes": 82038,
+      "sha256": "864b10b33444b9886c1817ad348f8d99b90506f440bbe22d9a40ce7c7dcc1540"
+    },
+    {
+      "file": "nz_2019_06_international-migration-june-2019-.xlsx",
+      "url": "https://www.stats.govt.nz/assets/Uploads/International-migration/International-migration-June-2019/Download-data/international-migration-june-2019-.xlsx",
+      "bytes": 93520,
+      "sha256": "81d7824428141c9f42ad3fd391ed3d2d21b3fa786dfed6c1de09c417d6ad2e23"
+    },
+    {
+      "file": "nz_2019_06_international-migration-june-2019-comparison-of-provisional-and-final-migration-estimates-.xlsx",
+      "url": "https://www.stats.govt.nz/assets/Uploads/International-migration/International-migration-June-2019/Download-data/international-migration-june-2019-comparison-of-provisional-and-final-migration-estimates-.xlsx",
+      "bytes": 105389,
+      "sha256": "4e74901d1c5845653d3acdaa3b469f7da5fe5eecae50f724c35ff9542243d0cd"
+    },
+    {
+      "file": "abs_2026_03_310101.xlsx",
+      "url": "https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/mar-2026/310101.xlsx",
+      "bytes": 71690,
+      "sha256": "79eb16006d54bb0f0dbb1e71bdcb2fcb0e098ecb3ae2f29d6e9418a3e5a48a74"
+    },
+    {
+      "file": "abs_2019_09_310101.xls",
+      "url": "https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/sep-2019/310101.xls",
+      "bytes": 111104,
+      "sha256": "55d61242d068bb912f811845096a1a1cfbd180e445d7239a2ab2019c23415235"
+    }
+  ],
+  "original_source_notice_scan": [
+    {
+      "file": "abs_2006-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2006-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2007-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2007-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2007-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2007-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2008-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2008-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2008-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2008-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2008-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2009-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-03_supp.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-09_supp.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2010-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2011-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2012-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2013-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2014-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-06_supp.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2015-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2016-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2017-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2018-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2019_09_310101.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-06_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-06_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-09_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-09_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-12_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2020-12_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-03_0.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-03_1.xls",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-06_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-09_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2021-12_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-03_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-06_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-09_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2022-12_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-03_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-06_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-09_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2023-12_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-03_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-06_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-09_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2024-12_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-03_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-06_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-09_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2025-12_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2026-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2026-03_1.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "abs_2026_03_310101.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2018-11_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2018-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-01_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-02_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-04_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-05_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-07_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-08_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019_06_international-migration-june-2019-.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2019_06_international-migration-june-2019-comparison-of-provisional-and-final-migration-estimates-.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2020-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2020-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2020-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2020-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2021-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2021-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2021-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2021-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2022-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2022-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2022-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2022-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2023-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2023-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2023-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2023-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-07_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-08_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-10_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-11_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2024-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-01_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-04_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-05_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-07_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-08_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-09_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-10_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-11_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2025-12_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-01_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-02_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-03_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-04_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-05_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-06_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-07_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026-08_0.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_2026_08_international-migration-august-2026.xlsx",
+      "notices": ""
+    },
+    {
+      "file": "nz_history.xlsx",
+      "notices": ""
+    }
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "openpyxl": "3.1.5",
+      "xlrd": "2.0.2",
+      "matplotlib": "3.11.2"
+    },
+    "package_version": "1.2.1-local",
+    "revision_date": "2026-10-22",
+    "data_freeze": "2026-10-18",
+    "status": "Editorially condensed manuscript and separate online supplement; data and estimates retained from the preceding validated revision"
+  },
+  "retained_extraction_matches_prior_delivery": true
+}

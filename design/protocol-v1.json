@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "decision_date": "2026-10-18",
+  "status": "Design fixed after archive feasibility checks and selected illustrative revisions; not an untouched-data preregistration. No registration has been submitted.",
+  "data_freeze": "2026-10-18",
+  "working_title": "When Do Migration Statistics Become Reliable? Release Revisions and Monitoring Stability in New Zealand and Australia",
+  "estimand": "Stability of publicly released estimates relative to a fixed-age published reference, not error relative to unobserved true migration.",
+  "countries": ["New Zealand", "Australia"],
+  "flows": ["Arrivals", "Departures", "Net migration"],
+  "primary_substantive_flow": "Net migration; arrivals and departures explain its revision behavior.",
+  "samples": {
+    "matched_country_comparison": {
+      "frequency": "calendar quarter",
+      "first_reference": "2019-Q1",
+      "last_reference": "2025-Q1",
+      "expected_reference_count_per_country": 25,
+      "new_zealand_aggregation": "Sum the three original monthly counts within one common publication vintage. Never combine months from different vintages. No quarterly standard error inferred from marginal monthly standard errors.",
+      "availability_gate": "Verify actual release timestamps and availability at every prescribed cutoff before calculating outcomes. Report any attrition and causes; never move a cutoff to obtain a preferred result."
+    },
+    "new_zealand_native": {
+      "frequency": "month",
+      "first_reference": "2019-01",
+      "last_reference": "2025-03",
+      "expected_reference_count": 75
+    },
+    "australia_extended": {
+      "frequency": "quarter",
+      "first_reference": "2011-Q1",
+      "last_reference": "2025-Q1",
+      "expected_reference_count": 57,
+      "role": "Longer within-country context; not used to rank countries against different reference years."
+    }
+  },
+  "time_alignment": {
+    "cutoff": "End of the calendar day h calendar months after the reference-period end, using month-end-preserving arithmetic.",
+    "as_of_rule": "Latest archived publication actually issued on or before the cutoff. No interpolation, use of future releases, or replacement by a newer download.",
+    "primary_ages_months": [6, 9, 12, 15],
+    "initial_release": "Also describe each country's first publication separately, with its actual publication delay. This is a product comparison, not a comparison at equal information age.",
+    "nz_native_additional_ages_months": [2, 3],
+    "missing": "Unavailable is missing, never zero. Report availability by age. Use a balanced matched cohort for the main age profile.",
+    "within_release_replacement": "If historical corrections replaced an archive file, label the available archive edition; do not assert unverified first-day byte identity."
+  },
+  "references": {
+    "primary": {
+      "age_months": 18,
+      "rule": "Published estimate available as of reference end plus 18 calendar months, regardless of its official provisional/final label. Record that label separately when documented.",
+      "reason": "Common elapsed time and proximity to both systems' regular maturation; this is explicitly a fixed-age reference rather than certified final truth."
+    },
+    "sensitivity": {
+      "age_months": 24,
+      "role": "Level-revision sensitivity only, evaluated against the 18-month specification on identical eligible cohorts. Directional sensitivity at 24 months requires exact prior-year counts in the same vintage and is otherwise omitted and disclosed.",
+      "expected_common_quarter_end": "2024-Q3"
+    },
+    "late_corrections": "Show separately documented post-final corrections, particularly in NZ, using the frozen latest vintage. These case studies are not a replacement for the primary reference."
+  },
+  "analysis_modules": [
+    {
+      "id": "revision_profiles",
+      "revision_sign": "R_f(t,h) = Y_f(t,18) - Y_f(t,h); positive means later upward revision.",
+      "primary_scale": "G_t = A_t(18) + D_t(18); use R_f/G_t for cross-country and component comparisons.",
+      "metrics": ["mean signed revision", "mean absolute revision", "median absolute revision", "90th percentile absolute revision", "share revised upward", "share revised downward"],
+      "units": ["persons", "percent of reference gross flow"],
+      "additional_flow_metric": "For arrivals and departures, report absolute revision divided by that flow's reference count when positive. Never divide net migration revision by net migration. Do not silently trim low-volume periods."
+    },
+    {
+      "id": "monitoring_stability",
+      "primary_net_requirement": "At least 90% of reference periods have absolute net revision no greater than 2% of reference gross flow.",
+      "net_tolerances_percent_gross": [0.5, 1, 2, 5],
+      "attainment_percent": [80, 90, 95],
+      "component_requirement": "For each positive gross flow, separately report 5% of its own reference count at 90% attainment; these component thresholds do not imply comparable stringency to the net threshold.",
+      "component_tolerances_percent_own_flow": [1, 2, 5, 10],
+      "qualification_rule": "Earliest tested age at which the requirement holds and remains satisfied at all later tested ages through 15 months. If none qualifies, report not attained before the 18-month reference. Never include the reference itself as evidence of successful early qualification.",
+      "interpretation": "All thresholds are pre-analysis illustrative user requirements, not official standards or guaranteed future performance. Show empirical counts, uncertainty, and the whole grid; never select a preferred threshold after seeing results."
+    },
+    {
+      "id": "direction_stability",
+      "primary_change": "Current quarter minus the same quarter of the preceding year, with both values taken from the same publication vintage. Compare with the corresponding same-vintage change in the 18-month reference publication.",
+      "primary_outputs": ["up/down/unchanged transition counts", "strict sign reversal rate", "conditional reversal rates for initially rising and initially falling migration"],
+      "material_change_check": "Three categories using change in net migration divided by current-period gross flow from the same vintage: less than -1%, within [-1%,1%], greater than 1%.",
+      "deadband_sensitivity_percent": [0.5, 2],
+      "interpretation": "Statistical monitoring statements, not demonstrated political or causal effects. No fitted seasonal adjustment and no random-guess accuracy test."
+    },
+    {
+      "id": "component_cancellation",
+      "identities": ["R_N = R_A - R_D", "mean(R_N^2) = mean(R_A^2) + mean(R_D^2) - 2*mean(R_A*R_D)"],
+      "scale_rule": "For the scaled identity, divide all three revisions of a given reference period by the same G_t before squaring.",
+      "checks": "Use identical periods and vintages. Record any rounding residual in published net figures; never force the identity by silently overwriting a published series.",
+      "claim_limit": "Arithmetic decomposition of net revision, not causal attribution to production methods."
+    },
+    {
+      "id": "nz_interval_usefulness",
+      "frequency": "monthly; retain published year-ended intervals as a secondary separate series if needed",
+      "interval": "Published 95% interval, or estimate plus/minus 1.96 times archived standard error where documented; do not mix interval levels.",
+      "metrics": ["coverage of the 18-month published reference", "mean width", "mean 95% interval score", "large misses with documented revision events"],
+      "interpretation": "Empirical usefulness for subsequent published references. These are model-uncertainty intervals, so revision coverage is not automatically a test of the producer's nominal inferential claim.",
+      "no_abs_invention": "No official ABS uncertainty intervals are imputed. No summation of monthly standard errors to produce quarterly intervals."
+    }
+  ],
+  "inference": {
+    "orientation": "Estimation and documented historical frequencies, not a large family of significance tests.",
+    "resampling_unit": "Entire reference-period vintage path, retaining all flows and ages; matched countries are resampled together for common-period differences.",
+    "procedure": "Stationary block bootstrap, 10000 replicates, fixed seed 20261018.",
+    "mean_block_length_primary": {"months": 18, "quarters": 6},
+    "sensitivity": {"months": [12, 24], "quarters": [4, 8]},
+    "intervals": "Pointwise 95% intervals, clearly distinguished from simultaneous confidence bands or forecast intervals.",
+    "limits": "Weak-dependence/stationarity assumptions are not guaranteed across pandemic or methods breaks. With only 25 matched quarters, resampling is an uncertainty sensitivity, not a certification of future reliability. No causal country ranking and no significance claims from an unadjusted grid."
+  },
+  "robustness": [
+    "18 versus 24 month references on matched cohorts",
+    "Common-period versus extended Australian history",
+    "All periods retained in primary estimates; pandemic-window and documented-method-break summaries kept descriptive",
+    "Leave-one-calendar-year-out influence analysis without retuning thresholds",
+    "Bootstrap block-length sensitivity",
+    "Material-change deadband sensitivity",
+    "Documented late corrections separately from regular maturation",
+    "Report low gross-volume periods and normalization sensitivity rather than winsorizing them"
+  ],
+  "not_in_current_core": [
+    "New ML, Bayesian, or many-model prediction tournament",
+    "Causal percentage attribution of revisions to data maturity versus method changes without counterfactual reprocessing",
+    "Automatic transfer of stability thresholds between migration definitions",
+    "Out-of-sample revision correction claimed from in-sample residuals"
+  ],
+  "publication_strategy": {
+    "contribution": "Reproducible release-vintage evidence linking revision size to stability of monitoring statements and to cancellation between gross-flow revisions.",
+    "fit_candidates": ["Demographic Research", "Journal of Official Statistics"],
+    "quartile_note": "Verify the intended ranking system, subject category and year directly before choosing the submission journal. No current quartile is certified by this protocol.",
+    "claim_limits": "No first-ever or Q1/Q2 acceptance guarantee. Compare explicitly with ONS 2025 migration revision/stability work and established real-time data literature.",
+    "release_plan": "Publish source manifest, extraction code, audit checks, and permitted vintage panel with clear versioning."
+  },
+  "next_execution": "Construct and validate actual-date as-of panels and sample attrition before any main outcome tables. Log all subsequent protocol changes with reasons."
+}
